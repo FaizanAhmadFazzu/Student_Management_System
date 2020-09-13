@@ -132,7 +132,7 @@ def create_user_profile(sender, instance, created, **kwargs):
         if instance.user_type==1:
             AdminHOD.objects.create(admin=instance)
         if instance.user_type==2:
-            Staffs.objects.create(admin=instance)
+            Staffs.objects.create(admin=instance, address="")
         if instance.user_type==3:
             Students.objects.create(admin=instance)
 
