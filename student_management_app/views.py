@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import login, logout
 from django.urls import reverse
@@ -20,9 +20,13 @@ def doLogin(request):
             login(request, user)
             if user.user_type == "1":
                 return HttpResponseRedirect('/admin_home')
-            return HttpResponse("Email: " + request.POST.get('email') + " Password " + request.POST.get('password'))
+            elif user.user_type=="2":
+                return HttpResponseRedirect(reverse('staff_home'))
+            else:
+                return HttpResponseRedirect(reverse('/student_home'))
         else:
-            return HttpResponse("Invalid Login")
+            messages.error(request, "Invalid Login Details")
+            return HttpResponseRedirect('/')
         
 
 def GetUserDetails(request):

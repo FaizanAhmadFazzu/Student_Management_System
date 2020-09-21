@@ -34,8 +34,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'manage_staff' as manage_staff %}
+            <a href="{{ manage_staff }}" class="nav-link {% if request.path == manage_staff %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Staff
@@ -43,8 +43,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'add_student' as add_student %}
+            <a href="{{ add_student }}" class="nav-link {% if request.path == add_student %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Student
@@ -52,8 +52,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'manage_students' as manage_students %}
+            <a href="{{ manage_students }}" class="nav-link {% if request.path == manage_students %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Students
@@ -61,8 +61,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'add_course' as add_course %}
+            <a href="{{ add_course }}" class="nav-link {% if request.path == add_course %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Course
@@ -70,8 +70,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'manage_course' as manage_course %}
+            <a href="{{ manage_course }}" class="nav-link {% if request.path == manage_course %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Course
@@ -79,8 +79,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'add_subject' as add_subject %}
+            <a href="{{ add_subject }}" class="nav-link {% if request.path == add_subject %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Add Subject
@@ -88,8 +88,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'manage_subject' as manage_subject %}
+            <a href="{{ manage_subject }}" class="nav-link {% if request.path == manage_subject %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Manage Subject
@@ -97,8 +97,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'view_attendance' as view_attendance %}
+            <a href="{{ view_attendance }}" class="nav-link {% if request.path == view_attendance %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 View Attendance
@@ -107,8 +107,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'student_feedback' as student_feedback %}
+            <a href="{{ student_feedback }}" class="nav-link {% if request.path == student_feedback %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Student Feedback
@@ -117,8 +117,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'staff_feedback' as staff_feedback %}
+            <a href="{{ staff_feedback }}" class="nav-link {% if request.path == staff_feedback %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Staff Feedback
@@ -127,8 +127,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'student_leave' as student_leave %}
+            <a href="{{ student_leave }}" class="nav-link {% if request.path == student_leave %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Student Leave
@@ -137,8 +137,8 @@
             </a>
           </li>
           <li class="nav-item">
-            {% url 'add_staff' as add_staff %}
-            <a href="{{ add_staff }}" class="nav-link {% if request.path == add_staff %}active{% endif %}">
+            {% url 'staff_leave' as staff_leave %}
+            <a href="{{ staff_leave }}" class="nav-link {% if request.path == staff_leave %}active{% endif %}">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Staff Leave

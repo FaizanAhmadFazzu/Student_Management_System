@@ -134,7 +134,7 @@ def create_user_profile(sender, instance, created, **kwargs):
         if instance.user_type==2:
             Staffs.objects.create(admin=instance, address="")
         if instance.user_type==3:
-            Students.objects.create(admin=instance)
+            Students.objects.create(admin=instance, course_id=Courses.objects.get(id=1), session_start_year="2020-07-01", session_end_year="2020-07-01", profile_pic="", gender="")
 
 @receiver(post_save, sender=CustomUser)
 def save_user_profile(sender, instance, **kwargs):
@@ -144,4 +144,6 @@ def save_user_profile(sender, instance, **kwargs):
         instance.staffs.save()
     if instance.user_type==3:
         instance.students.save()
+
+
 
