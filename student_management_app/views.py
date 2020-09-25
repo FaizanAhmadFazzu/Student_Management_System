@@ -23,7 +23,7 @@ def doLogin(request):
             elif user.user_type=="2":
                 return HttpResponseRedirect(reverse('staff_home'))
             else:
-                return HttpResponseRedirect(reverse('/student_home'))
+                return HttpResponseRedirect(reverse('student_home'))
         else:
             messages.error(request, "Invalid Login Details")
             return HttpResponseRedirect('/')

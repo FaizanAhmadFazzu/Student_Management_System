@@ -35,6 +35,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'student_management_app.LoginCheckMiddleWare.LoginCheckMiddleWare'
 ]
 
 ROOT_URLCONF = 'student_management_system.urls'
@@ -69,6 +70,7 @@ DATABASES = {
         'NAME': 'student_management_system',
         'USER': 'student_management_system',
         'PASSWORD': 'student_management_system_password',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
@@ -117,3 +119,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = "student_management_app.CustomUser"
+AUTHENTICATION_BACKENDS=['student_management_app.EmailBackEnd.EmailBackEnd']
